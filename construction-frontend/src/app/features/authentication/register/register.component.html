@@ -1,0 +1,91 @@
+<main class="signup-container">
+  <header class="brand-header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2154a66c82a7ab8e67e7f1d8c2e368b6f746f2db949d615675cd04499982182b?placeholderIfAbsent=true&apiKey=636115f9631f48bf97a296bc25ce3201" alt="Respondo logo" class="brand-logo" />
+    <h1 class="brand-name">respondo</h1>
+  </header>
+
+  <section class="signup-content">
+    <h2 class="signup-title">Add new User</h2>
+
+    <form class="signup-form" [formGroup]="registerForm" (ngSubmit)="register()">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName" class="form-label">Full name</label>
+        <input
+          type="text"
+          formControlName="userName"
+          id="fullName"
+          class="form-input"
+          placeholder="First name and last name"
+          required>
+        <div *ngIf="registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('userName')?.errors?.['required']" class="text-danger">Full name is required.</small>
+          <small *ngIf="registerForm.get('userName')?.errors?.['minlength']" class="text-warning">Full name must be at least 3 characters long.</small>
+          <small *ngIf="registerForm.get('userName')?.errors?.['maxLength']" class="text-warning">Full name cannot be more than 50 characters.</small>
+        </div>
+      </div>
+
+      <!-- User Type -->
+      <div class="form-group form-option">
+        <label for="userType" class="form-label">User Type</label>
+        <select id="userType" formControlName="userType" class="form-input">
+          <option value="admin" class="form-input">Admin</option>
+          <option value="user" class="form-input" selected>User</option>
+          <option value="technician" class="form-input">Technician</option>
+        </select>
+        <div *ngIf="registerForm.get('userType')?.invalid && registerForm.get('userType')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('userType')?.errors?.['required']" class="text-danger">User type is required.</small>
+        </div>
+      </div>
+
+      <!-- Work Email -->
+      <div class="form-group">
+        <label for="workEmail" class="form-label">Work email</label>
+        <input
+          type="email"
+          formControlName="email"
+          id="workEmail"
+          class="form-input"
+          placeholder="youremail@company.com"
+          required>
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('email')?.errors?.['required']" class="text-danger">Work email is required.</small>
+          <small *ngIf="registerForm.get('email')?.errors?.['email']" class="text-warning">Please enter a valid email address.</small>
+          <small *ngIf="registerForm.get('email')?.errors?.['pattern']" class="text-warning">Invalid email format.</small>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          id="password"
+          class="form-input"
+          placeholder="At least 12 characters"
+          required>
+        <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('password')?.errors?.['required']" class="text-danger">Password is required.</small>
+          <small *ngIf="registerForm.get('password')?.errors?.['minlength']" class="text-warning">Password must be at least 6 characters long.</small>
+          <small *ngIf="registerForm.get('password')?.errors?.['passwordStrength']" class="text-warning">Password must contain uppercase, lowercase, number, and special character.</small>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button" [disabled]="registerForm.invalid">Register</button>
+    </form>
+
+
+  </section>
+
+  <footer class="site-footer">
+    <p class="copyright">© 2022 Brand, Inc.</p>
+    <nav class="footer-nav">
+      <a href="#" class="footer-link">Privacy</a>
+      <a href="#" class="footer-link">Terms</a>
+      <a href="#" class="footer-link">Sitemap</a>
+    </nav>
+  </footer>
+</main>
+<router-outlet />
