@@ -1,6 +1,6 @@
 package com.task.config;
 
-import com.project.util.JwtUtil;
+import com.task.util.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
