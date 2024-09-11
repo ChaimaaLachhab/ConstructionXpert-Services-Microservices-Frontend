@@ -10,13 +10,25 @@ export class JwtService {
     return jwtDecode(token);
   }
 
-  getUserRole(token: string) {
+  getUserRole(token: string): string | null {
     const decodedToken = this.decodeToken(token);
-    return decodedToken?.role ;
+    return decodedToken?.role || null;
   }
 
-  getUsernameFromToken(token: string) {
+  saveToken(token: string): void {
+    localStorage.setItem('token', token);
+  }
+
+  getUsernameFromToken(token: string): string | null {
     const decodedToken = this.decodeToken(token);
     return decodedToken?.sub || null;
+  }
+
+  removeToken(): void {
+    localStorage.removeItem('token');
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('token');
   }
 }

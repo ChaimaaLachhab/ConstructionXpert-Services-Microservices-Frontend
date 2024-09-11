@@ -10,6 +10,8 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {MatInput} from "@angular/material/input";
 import {MatAnchor, MatButton} from "@angular/material/button";
+import {Role} from "../../../core/enums/role";
+import {LoginResponse} from "../../../core/dtos/login-response.model";
 
 @Component({
   selector: 'app-login',
@@ -40,54 +42,65 @@ export class LoginComponent {
     private jwtService : JwtService
   ) {
     this.loginForm = this.fb.group({
-      userName: ['', Validators.required],
+      userNameOrEmail: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
 
   login() {
-    if (this.loginForm.valid) {
-      const formValues = this.loginForm.value;
-      const loginUser: LoginUserDto = {
-        userNameOrEmail: formValues.userNameOrEmail,
-        password: formValues.password
-      };
+    if (!this.loginForm.valid) {
+      console.error('Form is not valid.');
+      return;
+    }
 
-      this.authService.authenticate(loginUser).subscribe({
-        next: (response) => {
-          console.log('Login successful:', response);
+    const formValues = this.loginForm.value;
+    const loginUser: LoginUserDto = {
+      userNameOrEmail: formValues.userNameOrEmail,
+      password: formValues.password
+    };
 
-          const token = response?.token;
-          if (token) {
-            localStorage.setItem('token', token);
-            console.log('Token expires in:', response.expiresIn);
+    this.authService.authenticate(loginUser).subscribe({
+      next: (response : LoginResponse) => this.handleLoginSuccess(response),
+      error: (err) => this.handleLoginError(err),
+      complete: () => console.log('Login process complete.')
+    });
+  }
 
-            try {
-              const role = this.jwtService.getUserRole(token);
+  private handleLoginSuccess(response: LoginResponse) {
+    console.log('Login successful:', response);
 
-              if (role === 'ADMIN') {
-                this.router.navigate(['/admin/dashboard']);
-              } else if (role === 'USER') {
-                this.router.navigate(['/user/dashboard-user']);
-              } else if (role === 'TECH') {
-                this.router.navigate(['/tech/dashboard-tech']);
-              } else {
-                console.error('Unknown role:', role);
-              }
-            } catch (error) {
-              console.error('Token decoding failed:', error);
-            }
-          } else {
-            console.error('No token found in the response.');
-          }
-        },
-        error: (err) => {
-          console.error('Login failed:', err);
-        },
-        complete: () => {
-          console.log('Login process complete.');
-        }
-      });
+    const token = response?.token;
+    if (!token) {
+      console.error('No token found in the response.');
+      return;
+    }
+
+    console.log('Token expires in:', response.expiresIn);
+
+    try {
+      const role: string | null = this.jwtService.getUserRole(token);
+      this.redirectUserByRole(role);
+    } catch (error) {
+      console.error('Token decoding failed:', error);
+    }
+  }
+
+
+  private handleLoginError(error: any) {
+    console.error('Login failed:', error);
+  }
+
+  private redirectUserByRole(role: string | null) {
+    switch (role) {
+      case Role.ADMIN.toString():
+        this.router.navigate(['/admin-dashboard']);
+        break;
+      case Role.CUSTOMER.toString():
+        this.router.navigate(['/user-dashboard']);
+        break;
+      default:
+        console.error('Unknown role:', role);
+        break;
     }
   }
 }

@@ -13,28 +13,30 @@
         <label for="fullName" class="form-label">Full name</label>
         <input
           type="text"
-          formControlName="userName"
+          formControlName="fullName"
           id="fullName"
           class="form-input"
           placeholder="First name and last name"
           required>
-        <div *ngIf="registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched" class="error-message">
-          <small *ngIf="registerForm.get('userName')?.errors?.['required']" class="text-danger">Full name is required.</small>
-          <small *ngIf="registerForm.get('userName')?.errors?.['minlength']" class="text-warning">Full name must be at least 3 characters long.</small>
-          <small *ngIf="registerForm.get('userName')?.errors?.['maxLength']" class="text-warning">Full name cannot be more than 50 characters.</small>
+        <div *ngIf="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('fullName')?.errors?.['required']" class="text-danger">Full name is required.</small>
         </div>
       </div>
 
-      <!-- User Type -->
-      <div class="form-group form-option">
-        <label for="userType" class="form-label">User Type</label>
-        <select id="userType" formControlName="userType" class="form-input">
-          <option value="admin" class="form-input">Admin</option>
-          <option value="user" class="form-input" selected>User</option>
-          <option value="technician" class="form-input">Technician</option>
-        </select>
-        <div *ngIf="registerForm.get('userType')?.invalid && registerForm.get('userType')?.touched" class="error-message">
-          <small *ngIf="registerForm.get('userType')?.errors?.['required']" class="text-danger">User type is required.</small>
+      <!-- User Name -->
+      <div class="form-group">
+        <label for="fullName" class="form-label">User name</label>
+        <input
+          type="text"
+          formControlName="userName"
+          id="userName"
+          class="form-input"
+          placeholder="Entre username"
+          required>
+        <div *ngIf="registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched" class="error-message">
+          <small *ngIf="registerForm.get('userName')?.errors?.['required']" class="text-danger">Username is required.</small>
+          <small *ngIf="registerForm.get('userName')?.errors?.['minlength']" class="text-warning">Username must be at least 3 characters long.</small>
+          <small *ngIf="registerForm.get('userName')?.errors?.['maxLength']" class="text-warning">Username cannot be more than 50 characters.</small>
         </div>
       </div>
 
