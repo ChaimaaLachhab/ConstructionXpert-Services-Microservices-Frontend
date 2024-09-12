@@ -80,7 +80,7 @@
     "ts.external.directory.path": "C:\\Users\\user\\Videos\\ConstructionXpert-Services-Microservices-Frontend\\construction-frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -226,6 +226,7 @@
       <updated>1725981086129</updated>
       <workItem from="1725981087169" duration="7591000" />
       <workItem from="1726042816955" duration="24929000" />
+      <workItem from="1726136904102" duration="28000" />
     </task>
     <servers />
   </component>
