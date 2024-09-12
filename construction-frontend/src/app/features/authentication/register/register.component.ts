@@ -48,6 +48,7 @@ export class RegisterComponent {
     private location: Location
   ) {
     this.registerForm = this.fb.group({
+      fullName: ['', [Validators.required]],
       userName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       email: ['', [
         Validators.required,
@@ -58,8 +59,7 @@ export class RegisterComponent {
         Validators.required,
         Validators.minLength(6),
         this.passwordStrengthValidator
-      ]],
-      userType: ['', Validators.required]
+      ]]
     });
   }
 
@@ -79,12 +79,13 @@ export class RegisterComponent {
     if (this.registerForm.valid) {
       const formValues = this.registerForm.value;
       const registerUserDto: RegisterUserDto = {
+        fullName : formValues.fullName,
         userName: formValues.userName,
         email: formValues.email,
         password: formValues.password
       };
 
-      this.authService.registerUser(formValues.userType, registerUserDto).subscribe({
+      this.authService.registerUser(registerUserDto).subscribe({
         next: (response) => {
           console.log('Registration successful:', response);
           this.location.back();        },

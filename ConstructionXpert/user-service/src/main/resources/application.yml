@@ -5,7 +5,7 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://userdb:3306/users_db_2?createDatabaseIfNotExist=true
+    url: jdbc:mysql://userdb:3306/user_db_2?createDatabaseIfNotExist=true
     username: root
     password: 1234
   jpa:
@@ -22,11 +22,13 @@ spring:
     locations: classpath:db/migration
 
 eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
   instance:
     prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 
 security:
   jwt:

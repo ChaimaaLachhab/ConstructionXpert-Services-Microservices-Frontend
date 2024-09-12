@@ -5,12 +5,11 @@ services:
       context: ./eureka-server
     ports:
       - "8761:8761"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8761/"]
-      interval: 10s
-      retries: 5
-      start_period: 30s
-      timeout: 10s
+    environment:
+      - SPRING_SECURITY_USER_NAME=admin
+      - SPRING_SECURITY_USER_PASSWORD=admin
+    networks:
+      - microservices-net
 
   gateway-service:
     build:
@@ -18,40 +17,66 @@ services:
     ports:
       - "8888:8888"
     depends_on:
-      eureka-server:
-        condition: service_healthy
+      - eureka-server
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://admin:admin@eureka-server:8761/eureka/
+    networks:
+      - microservices-net
 
   project-service:
     build:
       context: ./project-service
     ports:
       - "8081:8081"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://admin:admin@eureka-server:8761/eureka/
     depends_on:
+      - eureka-server
       - projectdb
+    networks:
+      - microservices-net
 
   resource-service:
     build:
       context: ./resource-service
     ports:
       - "8082:8082"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://admin:admin@eureka-server:8761/eureka/
     depends_on:
+      - eureka-server
       - resourcedb
+    networks:
+      - microservices-net
 
   task-service:
     build:
       context: ./task-service
     ports:
       - "8083:8083"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://admin:admin@eureka-server:8761/eureka/
     depends_on:
+      - eureka-server
       - taskdb
+    networks:
+      - microservices-net
 
   user-service:
     build:
       context: ./user-service
     ports:
       - "8080:8080"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://admin:admin@eureka-server:8761/eureka/
     depends_on:
+      - eureka-server
       - userdb
+    deploy:
+      restart_policy:
+        condition: on-failure
+    networks:
+      - microservices-net
 
   projectdb:
     image: "mysql:latest"
@@ -61,6 +86,8 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - project-db:/var/lib/mysql
+    networks:
+      - microservices-net
 
   resourcedb:
     image: "mysql:latest"
@@ -70,6 +97,8 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - resource-db:/var/lib/mysql
+    networks:
+      - microservices-net
 
   taskdb:
     image: "mysql:latest"
@@ -79,6 +108,8 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - task-db:/var/lib/mysql
+    networks:
+      - microservices-net
 
   userdb:
     image: "mysql:latest"
@@ -88,9 +119,15 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - user-db:/var/lib/mysql
+    networks:
+      - microservices-net
 
 volumes:
   project-db:
   resource-db:
   task-db:
   user-db:
+
+networks:
+  microservices-net:
+    driver: bridge

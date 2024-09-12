@@ -56,7 +56,7 @@ public class AuthenticationController {
             loginResponse.setToken(jwtToken);
             loginResponse.setExpiresIn(jwtService.getExpirationTime());
 
-            return ResponseEntity.ok(jwtToken);
+            return ResponseEntity.ok(loginResponse);
         } catch (UserNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
         } catch (Exception ex) {
