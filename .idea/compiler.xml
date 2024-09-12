@@ -18,12 +18,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eureka-server" options="-parameters" />
-      <module name="gateway-service" options="-parameters" />
-      <module name="project-service" options="-parameters" />
-      <module name="resource-service" options="-parameters" />
-      <module name="task-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
+      <module name="eureka-server" options="" />
+      <module name="gateway-service" options="" />
+      <module name="project-service" options="" />
+      <module name="resource-service" options="" />
+      <module name="task-service" options="" />
+      <module name="user-service" options="" />
     </option>
   </component>
 </project>
