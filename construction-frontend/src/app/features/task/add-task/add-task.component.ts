@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { TaskService } from '../../../core/services/task.service';
 import { Task, Status } from '../../../core/models/task.model';
-import {FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
   standalone: true,
+  imports: [
+    ReactiveFormsModule,
+  ],
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css'],
 })
