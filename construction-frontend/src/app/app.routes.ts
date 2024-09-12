@@ -11,6 +11,7 @@ import { AddResourceComponent } from './features/resource/add-resource/add-resou
 import { AddTaskComponent } from './features/task/add-task/add-task.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo:'login', pathMatch:'full'},
   { path: 'login', component: LoginComponent },
   { path: 'register',
     component: RegisterComponent,

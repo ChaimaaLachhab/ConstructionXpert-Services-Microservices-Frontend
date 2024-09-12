@@ -5,38 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e1c8125-ebb7-465a-ade9-ebcaf68e8257" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/enums/resource-type.enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/models/resource.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/models/task.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/resource.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/resource.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/task.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/task.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/add-resource/add-resource.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/add-resource/add-resource.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/add-resource/add-resource.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/add-resource/add-resource.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/list-resource/list-resource.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/list-resource/list-resource.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/list-resource/list-resource.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/resource/list-resource/list-resource.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/add-task/add-task.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/add-task/add-task.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/add-task/add-task.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/add-task/add-task.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/list-task/list-task.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/list-task/list-task.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/list-task/list-task.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/task/list-task/list-task.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/construction-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/admin-dashboard/admin-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/admin-dashboard/admin-dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/construction-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction-frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,40 +45,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.ConstructionXpert.gateway-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.ConstructionXpert: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.constructionxpert-services [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.constructionxpert-services [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProjectServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ResourceServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.TaskServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Videos/ConstructionXpert-Services-Microservices-Frontend/construction-frontend/src/app/core/services&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\user\\Videos\\ConstructionXpert-Services-Microservices-Frontend\\construction-frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.ConstructionXpert.gateway-service: Compose Deployment.executor": "Run",
+    "Docker.ConstructionXpert: Compose Deployment.executor": "Run",
+    "Maven.constructionxpert-services [clean].executor": "Run",
+    "Maven.constructionxpert-services [install].executor": "Run",
+    "Maven.gateway-service [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ProjectServiceApplication.executor": "Run",
+    "Spring Boot.ResourceServiceApplication.executor": "Run",
+    "Spring Boot.TaskServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "auth-project",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/Videos/ConstructionXpert-Services-Microservices-Frontend/construction-frontend/src/app/core/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "ts.external.directory.path": "C:\\Users\\user\\Videos\\ConstructionXpert-Services-Microservices-Frontend\\construction-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="ReactorSettings">
