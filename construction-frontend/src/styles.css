@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 @import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; /* Taille de texte par défaut */
+  line-height: 1.6; /* Hauteur des lignes pour une bonne lisibilité */
+  color: #333; /* Couleur du texte principale */
+  padding: 0;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Style pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif; /* Style spécifique pour les titres */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem; /* Espacement entre les paragraphes */
+}
+
+/* Hyperliens */
+a {
+  color: #171a1f; /* Couleur des liens */
+  text-decoration: none; /* Enlever la sous-ligne */
+}
+
+a:hover {
+  text-decoration: blink;
+}

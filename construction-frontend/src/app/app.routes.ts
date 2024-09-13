@@ -9,9 +9,11 @@ import {UserDashboardComponent} from "./shared/user-dashboard/user-dashboard.com
 import { ListResourceComponent } from './features/resource/list-resource/list-resource.component';
 import { AddResourceComponent } from './features/resource/add-resource/add-resource.component';
 import { AddTaskComponent } from './features/task/add-task/add-task.component';
+import {LandingpageComponent} from "./shared/landingpage/landingpage.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo:'login', pathMatch:'full'},
+  { path: '', redirectTo:'home', pathMatch:'full'},
+  { path: 'home', component: LandingpageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register',
     component: RegisterComponent,
