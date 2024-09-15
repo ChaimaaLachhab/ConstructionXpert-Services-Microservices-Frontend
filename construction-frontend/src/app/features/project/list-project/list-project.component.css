@@ -1,0 +1,27 @@
+p-dialog {
+  --dialog-border-radius: 15px;
+  --dialog-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --dialog-background: linear-gradient(135deg, #f0f4f7, #d9e9fc);
+}
+
+p-dialog h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p-dialog p {
+  color: #34495E;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+p-dialog .no-project {
+  color: #E74C3C;
+  font-size: 1.2rem;
+  text-align: center;
+}

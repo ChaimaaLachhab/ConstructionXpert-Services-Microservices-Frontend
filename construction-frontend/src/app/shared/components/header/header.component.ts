@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { BadgeModule } from 'primeng/badge';
@@ -6,67 +6,40 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
-import {Button} from "primeng/button";
+import {Button, ButtonDirective} from "primeng/button";
+import {FeatureComponent} from "../feature/feature.component";
+import {SidebarComponent} from "../sidebar/sidebar.component";
+import {Router} from "@angular/router";
+import {AuthenticationService} from "../../../core/services/authentication.service";
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, Button],
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, Button, ButtonDirective, FeatureComponent, SidebarComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
-  items: MenuItem[] | undefined;
 
-  ngOnInit() {
-    this.items = [
-      {
-        label: 'Home',
-        icon: 'pi pi-home'
-      },
-      {
-        label: 'Features',
-        icon: 'pi pi-star'
-      },
-      {
-        label: 'Projects',
-        icon: 'pi pi-search',
-        items: [
-          {
-            label: 'Core',
-            icon: 'pi pi-bolt',
-            shortcut: '⌘+S'
-          },
-          {
-            label: 'Blocks',
-            icon: 'pi pi-server',
-            shortcut: '⌘+B'
-          },
-          {
-            label: 'UI Kit',
-            icon: 'pi pi-pencil',
-            shortcut: '⌘+U'
-          },
-          {
-            separator: true
-          },
-          {
-            label: 'Templates',
-            icon: 'pi pi-palette',
-            items: [
-              {
-                label: 'Apollo',
-                icon: 'pi pi-palette',
-                badge: '2'
-              },
-              {
-                label: 'Ultima',
-                icon: 'pi pi-palette',
-                badge: '3'
-              }
-            ]
-          }
-        ]
-      }
-    ];
+  constructor(private authService: AuthenticationService, private router: Router) {}
+
+  isLoggedIn(){
+    return this.authService.isLoggedIn()
+  }
+
+  logout(){
+    this.authService.logout()
+  }
+
+  login(){
+    this.router.navigate(['/login'])
+  }
+
+  register(){
+    this.router.navigate(['/register'])
+  }
+
+  @Output() openSidebar: EventEmitter<void> = new EventEmitter();
+
+  ngOnInit(): void {
   }
 }

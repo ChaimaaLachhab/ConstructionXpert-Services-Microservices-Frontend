@@ -19,6 +19,14 @@ export class JwtService {
     localStorage.setItem('token', token);
   }
 
+  setUserRole(role: string) {
+    localStorage.setItem('userRole', role);
+  }
+
+  getUserRoleFromStorage(): string | null {
+    return localStorage.getItem('userRole');
+  }
+
   getUsernameFromToken(token: string): string | null {
     const decodedToken = this.decodeToken(token);
     return decodedToken?.sub || null;

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { TaskService } from '../../../core/services/task.service';
-import { Task, Status } from '../../../core/models/task.model';
+import { Task} from '../../../core/models/task.model';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {Status} from "../../../core/enums/status";
 
 @Component({
   selector: 'app-add-task',

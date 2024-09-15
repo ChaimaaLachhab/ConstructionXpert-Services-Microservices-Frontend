@@ -3,23 +3,56 @@
 @import "primeflex/primeflex.css";
 
 html, body { height: 100%; }
-body { margin: 0;
+body {
   font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--surface-ground);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px; /* Taille de texte par défaut */
-  line-height: 1.6; /* Hauteur des lignes pour une bonne lisibilité */
-  color: #333; /* Couleur du texte principale */
-  padding: 0;
 }
 
-/* Style pour les titres */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Georgia', serif; /* Style spécifique pour les titres */
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem 0;
+  font-family: inherit;
+  font-weight: 500;
   line-height: 1.2;
+  color: var(--surface-900);
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
 p {
   margin-bottom: 1rem; /* Espacement entre les paragraphes */
 }

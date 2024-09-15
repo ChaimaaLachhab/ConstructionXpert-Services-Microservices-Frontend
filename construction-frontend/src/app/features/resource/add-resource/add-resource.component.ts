@@ -31,7 +31,7 @@ export class AddResourceComponent implements OnInit {
 
   onSubmit(): void {
     if (this.resourceForm.valid) {
-      this.resourceService.addResource(this.resourceForm.value).subscribe(response => {
+      this.resourceService.createResource(this.resourceForm.value).subscribe(response => {
         console.log('Resource created:', response);
         // Handle success, e.g., show a success message or redirect
       }, error => {

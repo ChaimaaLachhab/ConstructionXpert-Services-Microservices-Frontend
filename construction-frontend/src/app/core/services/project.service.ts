@@ -32,6 +32,11 @@ export class ProjectService {
     return this.http.get<Project[]>(this.apiUrl);
   }
 
+  // Get project
+  getProjectById(id: number): Observable<Project> {
+    return this.http.get<Project>(`${this.apiUrl}/get/${id}`);
+  }
+
   // Check if a project exists
   existProject(id: number): Observable<boolean> {
     return this.http.get<boolean>(`${this.apiUrl}/${id}/exist`);

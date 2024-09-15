@@ -23,6 +23,10 @@ public class ProjectService {
         return projectRepository.findAll();
     }
 
+    public Project getProjectsById(Long projectId) {
+        return projectRepository.findById(projectId).get();
+    }
+
     public Project updateProject (Long id, Project projectDetails) throws ProjectNotFoundException {
         Project project = projectRepository.findById(id).orElseThrow(() -> new ProjectNotFoundException(id));
         project.setName(projectDetails.getName());

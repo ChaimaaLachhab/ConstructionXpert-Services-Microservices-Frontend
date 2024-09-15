@@ -10,6 +10,9 @@ import {SidebarComponent} from "../components/sidebar/sidebar.component";
 import {PasswordModule} from "primeng/password";
 import {FormsModule} from "@angular/forms";
 import {FeatureComponent} from "../components/feature/feature.component";
+import {FloatLabelModule} from "primeng/floatlabel";
+import {FooterComponent} from "../components/footer/footer.component";
+import {ListProjectComponent} from "../../features/project/list-project/list-project.component";
 
 @Component({
   selector: 'app-landingpage',
@@ -25,11 +28,13 @@ import {FeatureComponent} from "../components/feature/feature.component";
     SidebarComponent,
     PasswordModule,
     FormsModule,
-    FeatureComponent
+    FeatureComponent,
+    FloatLabelModule,
+    FooterComponent,
+    ListProjectComponent
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.css'
 })
 export class LandingpageComponent {
-  value: string | undefined;
 }

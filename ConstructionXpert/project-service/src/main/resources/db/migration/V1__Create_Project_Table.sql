@@ -4,5 +4,6 @@ CREATE TABLE project (
                          description TEXT,
                          start_date DATE,
                          end_date DATE,
-                         budget DECIMAL(19,2)
+                         budget DECIMAL(19,2),
+                         status VARCHAR(255) NOT NULL
 );

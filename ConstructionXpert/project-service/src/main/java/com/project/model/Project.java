@@ -1,5 +1,6 @@
 package com.project.model;
 
+import com.project.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,4 +20,7 @@ public class Project {
     private LocalDate startDate;
     private LocalDate endDate;
     private BigDecimal budget;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 }

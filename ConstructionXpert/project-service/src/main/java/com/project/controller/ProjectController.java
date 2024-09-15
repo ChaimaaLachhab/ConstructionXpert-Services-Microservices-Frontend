@@ -46,6 +46,13 @@ public class ProjectController {
         return projectService.getAllProjects();
     }
 
+    // Both ADMIN and CUSTOMER can view project
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/get/{id}")
+    public Project getProjectsById(@PathVariable Long id) {
+        return projectService.getProjectsById(id);
+    }
+
     // Both ADMIN and CUSTOMER can check if a project exists
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping("/{id}/exist")
