@@ -237,11 +237,6 @@
               [value]="project.status"
               [severity]="getSeverity(project.status)" />
           </ng-template>
-          <ng-template let-option pTemplate="item">
-            <p-tag
-              [value]="option.label"
-              [severity]="getSeverity(option.label)" />
-          </ng-template>
         </p-dropdown>
       </div>
     </ng-template>

@@ -14,10 +14,7 @@ export const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
   { path: 'home', component: LandingpageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register',
-    component: RegisterComponent,
-    canActivate: [authGuard, roleGuard([Role.ADMIN])]
-  },
+  { path: 'register', component: RegisterComponent },
   { path: 'dashboard',
     component: DashboardComponent,
     canActivate: [authGuard, roleGuard([Role.ADMIN])]

@@ -82,7 +82,7 @@ services:
     image: "mysql:latest"
     restart: always
     environment:
-      MYSQL_DATABASE: project_db_2
+      MYSQL_DATABASE: project_db_1
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - project-db:/var/lib/mysql
@@ -93,7 +93,7 @@ services:
     image: "mysql:latest"
     restart: always
     environment:
-      MYSQL_DATABASE: resource_db_2
+      MYSQL_DATABASE: resource_db_1
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - resource-db:/var/lib/mysql
@@ -104,7 +104,7 @@ services:
     image: "mysql:latest"
     restart: always
     environment:
-      MYSQL_DATABASE: task_db_2
+      MYSQL_DATABASE: task_db_1
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - task-db:/var/lib/mysql
@@ -115,7 +115,7 @@ services:
     image: "mysql:latest"
     restart: always
     environment:
-      MYSQL_DATABASE: user_db_2
+      MYSQL_DATABASE: user_db_1
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - user-db:/var/lib/mysql
