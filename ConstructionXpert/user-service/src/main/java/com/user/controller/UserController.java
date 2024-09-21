@@ -5,6 +5,7 @@ import com.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class UserController {
      *
      * @return List of all users.
      */
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers();
@@ -36,6 +38,7 @@ public class UserController {
      * @param id The ID of the user to retrieve.
      * @return The user with the specified ID.
      */
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/details/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
@@ -49,6 +52,7 @@ public class UserController {
      * @param user The user with updated information.
      * @return The updated user.
      */
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
         user.setId(id);
@@ -61,6 +65,7 @@ public class UserController {
      *
      * @param id The ID of the user to delete.
      */
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);

@@ -1,0 +1,259 @@
+<div class="card p-2 m-3">
+  <p-toast></p-toast>
+  <p-toolbar styleClass="mb-4 gap-2">
+    <ng-template pTemplate="left">
+      <p-button
+        severity="success"
+        label="New"
+        icon="pi pi-plus"
+        class="mr-2"
+        (onClick)="openNew()"></p-button>
+      <p-button
+        severity="danger"
+        label="Delete"
+        icon="pi pi-trash"
+        (onClick)="deleteSelectedProjects()"
+        [disabled]="!selectedProjects  || !selectedProjects.length"></p-button>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <p-button
+        severity="help"
+        label="Export"
+        icon="pi pi-upload"></p-button>
+    </ng-template>
+  </p-toolbar>
+
+  <p-dialog
+    header="Project Details"
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '50rem', 'border-radius': '15px', 'box-shadow': '0 4px 10px rgba(0, 0, 0, 0.2)' }"
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+    [contentStyle]="{ 'padding': '2rem', 'font-family': 'Poppins, sans-serif', 'background': 'linear-gradient(135deg, #f0f4f7, #d9e9fc)' }">
+
+    <div *ngIf="project">
+      <h3 style="font-size: 1.8rem; color: #2C3E50; margin-bottom: 1rem; text-align: center;">
+        {{ project.name }}
+      </h3>
+
+      <p style="color: #34495E; font-size: 1.1rem; margin-bottom: 0.8rem;">
+        <strong>Description:</strong> {{ project.description }}
+      </p>
+
+      <p style="color: #34495E; font-size: 1.1rem; margin-bottom: 0.8rem;">
+        <strong>Start Date:</strong> {{ project.startDate }}
+      </p>
+
+      <p style="color: #34495E; font-size: 1.1rem; margin-bottom: 0.8rem;">
+        <strong>End Date:</strong> {{ project.endDate }}
+      </p>
+
+      <p style="color: #34495E; font-size: 1.1rem; margin-bottom: 0.8rem;">
+        <strong>Budget:</strong> {{ project.budget | currency:'USD':'symbol' }}
+      </p>
+
+      <p style="color: #34495E; font-size: 1.1rem; margin-bottom: 0.8rem;">
+        <strong>Status:</strong> {{ project.status }}
+      </p>
+    </div>
+
+    <p *ngIf="!project" style="color: #E74C3C; font-size: 1.2rem; text-align: center;">No project selected.</p>
+
+  </p-dialog>
+
+
+  <p-table
+    #dt
+    [value]="projects"
+    [rows]="10"
+    [paginator]="true"
+    [globalFilterFields]="['name', 'description', 'budget', 'status.name']"
+    [tableStyle]="{ 'min-width': '75rem' }"
+    [(selection)]="selectedProjects"
+    [rowHover]="true"
+    dataKey="id"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [showCurrentPageReport]="true"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex align-items-center justify-content-between">
+        <h5 class="m-0">Manage Products</h5>
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+            placeholder="Search..." />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 4rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th pSortableColumn="name" style="min-width:15rem">
+          Name <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="description" style="min-width:20rem">
+          Description <p-sortIcon field="description"></p-sortIcon>
+        </th>
+        <th pSortableColumn="startDate">
+          Start Date <p-sortIcon field="startDate"></p-sortIcon>
+        </th>
+        <th pSortableColumn="endDate">
+          End Date <p-sortIcon field="endDate"></p-sortIcon>
+        </th>
+        <th pSortableColumn="budget">
+          Budget <p-sortIcon field="budget"></p-sortIcon>
+        </th>
+        <th pSortableColumn="status">
+          Status <p-sortIcon field="status"></p-sortIcon>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-project>
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="project"></p-tableCheckbox>
+        </td>
+        <td>{{ project.name }}</td>
+        <td>{{ project.description }}</td>
+        <td>{{ project.startDate }}</td>
+        <td>{{ project.endDate }}</td>
+        <td>{{ project.budget | currency : 'USD' }}</td>
+        <td>
+          <p-tag
+            [value]="project.status"
+            [severity]="getSeverity(project.status)">
+          </p-tag>
+        </td>
+        <td>
+          <p-button
+            icon="pi pi-pencil"
+            class="mr-2"
+            [rounded]="true"
+            [outlined]="true"
+            severity="success"
+            (onClick)="editProject(project)"></p-button>
+          <p-button
+            icon="pi pi-trash"
+            class="mr-2"
+            severity="danger"
+            [rounded]="true"
+            [outlined]="true"
+            (onClick)="deleteProject(project)"></p-button>
+          <p-button
+            icon="pi pi-info"
+            class="mr-2"
+            [rounded]="true"
+            [outlined]="true"
+            severity="info"
+            (onClick)="showProject(project)"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+        In total there are {{ projects ? projects.length : 0 }} projects.
+      </div>
+    </ng-template>
+  </p-table>
+
+  <p-dialog
+    [(visible)]="projectDialog"
+    [style]="{ width: '450px' }"
+    header="Project Details"
+    [modal]="true"
+    styleClass="p-fluid">
+    <ng-template pTemplate="content">
+      <div class="field">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          pInputText
+          id="name"
+          [(ngModel)]="project.name"
+          required
+          autofocus />
+        <small class="p-error" *ngIf="submitted && !project.name">
+          Name is required.
+        </small>
+      </div>
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          pInputTextarea
+          [(ngModel)]="project.description"
+          required
+          rows="3"
+          cols="20">
+        </textarea>
+      </div>
+
+      <div class="formgrid grid">
+        <div class="field col">
+          <label for="startDate">Start Date</label>
+          <p-calendar
+            id="startDate"
+            [(ngModel)]="project.startDate"
+            [showTime]="true"
+            [hourFormat]="'24'"
+            required />
+        </div>
+        <div class="field col">
+          <label for="endDate">End Date</label>
+          <p-calendar
+            id="endDate"
+            [(ngModel)]="project.endDate"
+            [showTime]="true"
+            [hourFormat]="'24'"
+            required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="budget">Budget</label>
+        <p-inputNumber
+          id="budget"
+          [(ngModel)]="project.budget"
+          mode="currency"
+          currency="USD"
+          locale="en-US"></p-inputNumber>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <p-dropdown
+          [(ngModel)]="project.status"
+          id="status"
+          [options]="statuses">
+          <ng-template pTemplate="selectedItem">
+            <p-tag
+              [value]="project.status"
+              [severity]="getSeverity(project.status)" />
+          </ng-template>
+        </p-dropdown>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+      <p-button
+        label="Cancel"
+        icon="pi pi-times"
+        [text]="true"
+        (onClick)="hideDialog()"></p-button>
+      <p-button
+        label="Save"
+        icon="pi pi-check"
+        [text]="true"
+        (onClick)="saveProject()"></p-button>
+    </ng-template>
+  </p-dialog>
+
+  <p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>
+</div>

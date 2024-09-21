@@ -4,26 +4,20 @@ import {RegisterComponent} from "./features/authentication/register/register.com
 import {authGuard} from "./core/guards/auth.guard";
 import {roleGuard} from "./core/guards/role.guard";
 import {Role} from "./core/enums/role";
-import {AdminDashboardComponent} from "./shared/admin-dashboard/admin-dashboard.component";
-import {UserDashboardComponent} from "./shared/user-dashboard/user-dashboard.component";
 import { ListResourceComponent } from './features/resource/list-resource/list-resource.component';
 import { AddResourceComponent } from './features/resource/add-resource/add-resource.component';
 import { AddTaskComponent } from './features/task/add-task/add-task.component';
+import {LandingpageComponent} from "./shared/landingpage/landingpage.component";
+import {DashboardComponent} from "./shared/dashboard/dashboard.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo:'login', pathMatch:'full'},
+  { path: '', redirectTo:'home', pathMatch:'full'},
+  { path: 'home', component: LandingpageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register',
-    component: RegisterComponent,
+  { path: 'register', component: RegisterComponent },
+  { path: 'dashboard',
+    component: DashboardComponent,
     canActivate: [authGuard, roleGuard([Role.ADMIN])]
-  },
-  { path: 'admin-dashboard',
-    component: AdminDashboardComponent,
-    canActivate: [authGuard, roleGuard([Role.ADMIN])]
-  },
-  { path: 'user-dashboard',
-    component: UserDashboardComponent,
-    canActivate: [authGuard, roleGuard([Role.CUSTOMER])]
   },
   {path: 'add-task',
     component: AddTaskComponent,

@@ -1,0 +1,19 @@
+<div>
+  <p-menubar>
+    <ng-template pTemplate="start">
+      <img width="40" height="40" src="https://static.vecteezy.com/system/resources/previews/019/897/563/original/modern-real-estate-and-construction-logo-free-png.png" alt="">
+    </ng-template>
+
+    <ng-template pTemplate="item">
+      <p-button (onClick)="openSidebar.emit()" icon="pi pi-arrow-right"></p-button>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
+        <button *ngIf="!isLoggedIn()" pButton pRipple label="Login" class="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500" (click)="login()"></button>
+        <button *ngIf="!isLoggedIn()" pButton pRipple label="Register" class="p-button-rounded border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="register()"></button>
+
+        <button *ngIf="isLoggedIn()" pButton pRipple label="Logout" class="p-button-rounded border-none ml-5 font-light line-height-2 bg-red-500 text-white" (click)="logout()"></button>
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>

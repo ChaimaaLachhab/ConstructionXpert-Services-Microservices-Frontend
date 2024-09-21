@@ -5,7 +5,7 @@ spring:
   application:
     name: project-service
   datasource:
-    url: jdbc:mysql://projectdb:3306/project_db_2?createDatabaseIfNotExist=true
+    url: jdbc:mysql://projectdb:3306/project_db_1?createDatabaseIfNotExist=true
     username: root
     password: 1234
   jpa:

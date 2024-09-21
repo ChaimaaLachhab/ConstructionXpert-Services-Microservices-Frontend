@@ -79,11 +79,18 @@ export class LoginComponent {
 
     try {
       const role: string | null = this.jwtService.getUserRole(token);
-      this.redirectUserByRole(role);
+
+      if (role) {
+        this.jwtService.setUserRole(role);
+        this.redirectUserByRole(role);
+      } else {
+        console.error('No role found in the token.');
+      }
     } catch (error) {
       console.error('Token decoding failed:', error);
     }
   }
+
 
 
   private handleLoginError(error: any) {
@@ -93,10 +100,10 @@ export class LoginComponent {
   private redirectUserByRole(role: string | null) {
     switch (role) {
       case Role.ADMIN.toString():
-        this.router.navigate(['/admin-dashboard']);
+        this.router.navigate(['/dashboard']);
         break;
       case Role.CUSTOMER.toString():
-        this.router.navigate(['/user-dashboard']);
+        this.router.navigate(['/dashboard']);
         break;
       default:
         console.error('Unknown role:', role);
