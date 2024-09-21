@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { RegisterUserDto } from '../../../core/dtos/register-user-dto.dto';
-import {Route, RouterLink, RouterOutlet} from "@angular/router";
+import { Router, RouterLink, RouterOutlet} from "@angular/router";
 import { MatCard, MatCardContent} from "@angular/material/card";
 import { MatFormField, MatLabel} from "@angular/material/form-field";
 import { MatInput} from "@angular/material/input";
@@ -45,7 +45,7 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthenticationService,
-    private router: Route
+    private router: Router
   ) {
     this.registerForm = this.fb.group({
       fullName: ['', [Validators.required]],
