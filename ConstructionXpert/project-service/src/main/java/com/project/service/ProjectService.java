@@ -34,6 +34,7 @@ public class ProjectService {
         project.setStartDate(projectDetails.getStartDate());
         project.setEndDate(projectDetails.getEndDate());
         project.setBudget(projectDetails.getBudget());
+        project.setStatus(projectDetails.getStatus());
         return projectRepository.save(project);
     }
 
