@@ -21,9 +21,8 @@ pipeline {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     for (service in services) {
                         dir(service) {
-                            // Use mvnw.cmd for Windows environment
-                            bat 'mvnw.cmd clean install'
-                            bat 'mvnw.cmd test'
+                            bat 'mvn clean install'
+                            bat 'mvn test'
                         }
                     }
                 }
@@ -37,7 +36,7 @@ pipeline {
                     for (service in services) {
                         dir(service) {
                             withSonarQubeEnv('SonarQubeServer') {
-                                bat "mvnw.cmd sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                                bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
                             }
                         }
                     }
@@ -60,13 +59,11 @@ pipeline {
                 script {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     for (service in services) {
-                        // Use bat to run Docker commands on Windows
-                        bat "docker build -t constructionxpert-${service} ."
+                        docker.build("constructionxpert-${service}")
                     }
                 }
             }
         }
-
         stage('Tag and Push Docker Images') {
             steps {
                 script {
