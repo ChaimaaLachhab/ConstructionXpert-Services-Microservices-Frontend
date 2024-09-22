@@ -22,10 +22,9 @@ pipeline {
         stage('Build and Unit Tests') {
             steps {
                 script {
-                    def pomFiles = findFiles(glob: '**/pom.xml')
-
-                    pomFiles.each { pomFile ->
-                        dir(pomFile.path - 'pom.xml') {
+                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    services.each { service ->
+                        dir(service) {
                             bat "mvn clean install -X"
                             bat "mvn test"
                         }
@@ -33,6 +32,7 @@ pipeline {
                 }
             }
         }
+
 
         stage('SonarQube Analysis') {
             steps {
