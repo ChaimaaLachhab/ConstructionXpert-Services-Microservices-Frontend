@@ -21,29 +21,15 @@ pipeline {
 
         stage('Build and Unit Tests') {
             steps {
-                script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    services.each { service ->
-                        dir(service) {
-                            bat "mvn clean install -X"
-                            bat "mvn test"
-                        }
-                    }
-                }
+                bat "mvn clean install -X"
+                bat "mvn test"
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
-                script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    services.each { service ->
-                        dir(service) {
-                            withSonarQubeEnv('SonarQubeServer') {
-                                bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
-                            }
-                        }
-                    }
+                withSonarQubeEnv('SonarQubeServer') {
+                    bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
                 }
             }
         }
