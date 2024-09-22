@@ -21,8 +21,16 @@ pipeline {
 
         stage('Build and Unit Tests') {
             steps {
-                bat "mvn clean install -X"
-                bat "mvn test"
+                script {
+                    def pomFiles = findFiles(glob: '**/pom.xml')
+
+                    pomFiles.each { pomFile ->
+                        dir(pomFile.path - 'pom.xml') {
+                            bat "mvn clean install -X"
+                            bat "mvn test"
+                        }
+                    }
+                }
             }
         }
 

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +143,7 @@
       <workItem from="1726945067554" duration="640000" />
       <workItem from="1726945756416" duration="13294000" />
       <workItem from="1726998276143" duration="4446000" />
-      <workItem from="1727002946192" duration="19110000" />
+      <workItem from="1727002946192" duration="19506000" />
     </task>
     <servers />
   </component>
