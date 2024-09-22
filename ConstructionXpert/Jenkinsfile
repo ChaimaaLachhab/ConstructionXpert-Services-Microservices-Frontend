@@ -21,9 +21,9 @@ pipeline {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     for (service in services) {
                         dir(service) {
-                            // Use Maven wrapper (mvnw.cmd for Windows, mvnw for Unix-like systems)
-                            bat './mvnw.cmd clean install'
-                            bat './mvnw.cmd test'
+                            // Use full path to ./mvnw
+                            bat "${WORKSPACE}/${service}/./mvnw clean install"
+                            bat "${WORKSPACE}/${service}/./mvnw test"
                         }
                     }
                 }
@@ -37,7 +37,7 @@ pipeline {
                     for (service in services) {
                         dir(service) {
                             withSonarQubeEnv('SonarQubeServer') {
-                                bat "./mvnw.cmd sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                                bat "${WORKSPACE}/${service}/./mvnw sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
                             }
                         }
                     }
