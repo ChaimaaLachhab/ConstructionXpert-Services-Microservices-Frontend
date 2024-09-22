@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'mvn' // Ensure this Maven tool is configured in Jenkins
+        maven 'mvn'
     }
 
     environment {
@@ -23,12 +23,10 @@ pipeline {
             steps {
                 script {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    for (service in services) {
+                    services.each { service ->
                         dir(service) {
-                            withMaven(maven: 'mvn') {
-                                bat "mvn clean install"
-                                bat "mvn test"
-                            }
+                            bat "mvn clean install"
+                            bat "mvn test"
                         }
                     }
                 }
@@ -39,7 +37,7 @@ pipeline {
             steps {
                 script {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    for (service in services) {
+                    services.each { service ->
                         dir(service) {
                             withSonarQubeEnv('SonarQubeServer') {
                                 bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
@@ -64,7 +62,7 @@ pipeline {
             steps {
                 script {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    for (service in services) {
+                    services.each { service ->
                         docker.build("constructionxpert-${service}")
                     }
                 }
