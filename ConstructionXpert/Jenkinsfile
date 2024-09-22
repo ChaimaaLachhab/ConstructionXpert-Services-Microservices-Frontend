@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'mvn' // Ensure this Maven tool is configured in Jenkins
+    }
+
     environment {
         SONARQUBE_SERVER = 'SonarQubeServer'
         DOCKER_REGISTRY = 'your-docker-registry-url'
@@ -21,9 +25,10 @@ pipeline {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     for (service in services) {
                         dir(service) {
-                            // Use full path to ./mvnw
-                            bat "${WORKSPACE}/${service}/./mvnw clean install"
-                            bat "${WORKSPACE}/${service}/./mvnw test"
+                            withMaven(maven: 'mvn') {
+                                bat "mvn clean install"
+                                bat "mvn test"
+                            }
                         }
                     }
                 }
@@ -37,7 +42,7 @@ pipeline {
                     for (service in services) {
                         dir(service) {
                             withSonarQubeEnv('SonarQubeServer') {
-                                bat "${WORKSPACE}/${service}/./mvnw sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                                bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
                             }
                         }
                     }
