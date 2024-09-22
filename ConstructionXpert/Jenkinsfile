@@ -98,6 +98,16 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Docker Compose') {
+            steps {
+                script {
+                    dir('ConstructionXpert') {
+                        bat 'docker-compose up -d'
+                    }
+                }
+            }
+        }
     }
 
     post {
