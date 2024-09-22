@@ -16,7 +16,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/ChaimaaLachhab/ConstructionXpert-Services-Microservices-Frontend.git'
-                bat "ls -la"
             }
         }
 
@@ -26,7 +25,7 @@ pipeline {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     services.each { service ->
                         dir(service) {
-                            bat "mvn clean install"
+                            bat "mvn clean install -X"
                             bat "mvn test"
                         }
                     }
