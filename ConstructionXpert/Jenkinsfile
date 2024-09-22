@@ -1,0 +1,96 @@
+pipeline {
+    agent any
+
+    environment {
+        SONARQUBE_SERVER = 'SonarQubeServer'
+        DOCKER_REGISTRY = 'your-docker-registry-url'
+        DOCKER_HUB_REPO = 'chaimaalachhab01/constructionxpert'
+        SONAR_TOKEN = credentials('SonarQubeToken')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ChaimaaLachhab/ConstructionXpert-Services-Microservices-Frontend.git'
+            }
+        }
+
+        stage('Build and Unit Tests') {
+            steps {
+                script {
+                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    for (service in services) {
+                        dir(service) {
+                            sh './mvnw clean install'
+                            sh './mvnw test'
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    for (service in services) {
+                        dir(service) {
+                            withSonarQubeEnv('SonarQubeServer') {
+                                sh "./mvnw sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Quality Gate Check') {
+            steps {
+                script {
+                    timeout(time: 5, unit: 'MINUTES') {
+                        waitForQualityGate abortPipeline: true
+                    }
+                }
+            }
+        }
+
+        stage('Build Docker Images') {
+            steps {
+                script {
+                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    for (service in services) {
+                        docker.build("constructionxpert-${service}")
+                    }
+                }
+            }
+        }
+        stage('Tag and Push Docker Images') {
+            steps {
+                script {
+                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    docker.withRegistry("https://index.docker.io/v1/", 'docker-credentials-id') {
+                        services.each { service ->
+                            def imageName = "${DOCKER_HUB_REPO}:${service}"
+                            sh """
+                                docker tag constructionxpert-${service}:latest ${imageName}
+                                docker push ${imageName}
+                            """
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
