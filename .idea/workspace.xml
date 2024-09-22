@@ -4,77 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="376bb948-47fa-45a7-a552-7812080133e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/test/java/com/project/service/ProjectServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/test/java/com/resource/service/ResourceServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/service/AuthenticationServiceTest.java" afterDir="false" />
+    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/sonar-project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/sonar-project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit5 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
-  <component name="ProjectId" id="2mLwD8I3bXorOzA6S31P5LaZ8iA" />
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2mOQHZ3OcFJnqVvlXOGjdvV8NtE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.ConstructionXpert: Compose Deployment.executor": "Run",
-    "JUnit.AuthenticationServiceTest.executor": "Run",
-    "JUnit.ProjectServiceTest.executor": "Run",
-    "JUnit.ResourceServiceTest.executor": "Run",
-    "JUnit.TaskServiceTest.executor": "Run",
-    "Maven.constructionxpert-services [clean].executor": "Run",
-    "Maven.constructionxpert-services [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "sonar-qube-jenkins",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "run.configurations.included.in.services": "true",
-    "ts.external.directory.path": "C:\\Users\\PCPACK\\Downloads\\ConstructionXpert-Services-Microservices-Frontend\\construction-frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.constructionxpert-services [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [sonar:sonar...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sonar-qube-jenkins&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PCPACK/Videos/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.user.service" />
-      <recent name="com.resource.service" />
-      <recent name="com.project.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert\eureka-server" />
+      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert\eureka-server\src\main\resources" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn sonar:sonar -X" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -85,67 +97,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AuthenticationServiceTest">
-    <configuration name="AuthenticationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.user.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.AuthenticationServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.service.ProjectServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResourceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="resource-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.resource.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.resource.service" />
-      <option name="MAIN_CLASS_NAME" value="com.resource.service.ResourceServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="task-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.task.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.task.service" />
-      <option name="MAIN_CLASS_NAME" value="com.task.service.TaskServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.constructionxpert.eureka.EurekaServerApplication" />
@@ -188,52 +140,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionXpert: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/construction-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
-      <item itemvalue="JUnit.AuthenticationServiceTest" />
-      <item itemvalue="JUnit.ProjectServiceTest" />
-      <item itemvalue="JUnit.ResourceServiceTest" />
-      <item itemvalue="JUnit.TaskServiceTest" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
-      <item itemvalue="Spring Boot.ProjectServiceApplication" />
-      <item itemvalue="Spring Boot.ResourceServiceApplication" />
-      <item itemvalue="Spring Boot.TaskServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.AuthenticationServiceTest" />
-        <item itemvalue="JUnit.ResourceServiceTest" />
-        <item itemvalue="JUnit.TaskServiceTest" />
-        <item itemvalue="JUnit.ProjectServiceTest" />
-        <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -244,18 +150,28 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\PCPACK\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="376bb948-47fa-45a7-a552-7812080133e9" name="Changes" comment="" />
-      <created>1726869041738</created>
+      <changelist id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
+      <created>1726945065169</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726869041738</updated>
-      <workItem from="1726869043173" duration="9356000" />
+      <updated>1726945065169</updated>
+      <workItem from="1726945067554" duration="640000" />
+      <workItem from="1726945756416" duration="13294000" />
+      <workItem from="1726998276143" duration="4446000" />
+      <workItem from="1727002946192" duration="6851000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
