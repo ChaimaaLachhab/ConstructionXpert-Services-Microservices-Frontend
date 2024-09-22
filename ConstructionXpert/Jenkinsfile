@@ -21,8 +21,8 @@ pipeline {
                     def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
                     for (service in services) {
                         dir(service) {
-                            sh './mvnw clean install'
-                            sh './mvnw test'
+                            bat './mvnw clean install'
+                            bat './mvnw test'
                         }
                     }
                 }
@@ -36,7 +36,7 @@ pipeline {
                     for (service in services) {
                         dir(service) {
                             withSonarQubeEnv('SonarQubeServer') {
-                                sh "./mvnw sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                                bat "./mvnw sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
                             }
                         }
                     }
@@ -71,7 +71,7 @@ pipeline {
                     docker.withRegistry("https://index.docker.io/v1/", 'docker-credentials-id') {
                         services.each { service ->
                             def imageName = "${DOCKER_HUB_REPO}:${service}"
-                            sh """
+                            bat """
                                 docker tag constructionxpert-${service}:latest ${imageName}
                                 docker push ${imageName}
                             """
