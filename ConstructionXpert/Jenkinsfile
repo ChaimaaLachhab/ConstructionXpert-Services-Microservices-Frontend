@@ -22,11 +22,15 @@ pipeline {
         stage('Build and Unit Tests') {
             steps {
                 script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    services.each { service ->
-                        dir(service) {
-                            withMaven(maven: 'mvn') {
-                                bat "mvn clean install -X"
+                    def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+
+                    dir('ConstructionXpert') {
+                        bat "mvn clean install -X"
+
+                        services.each { service ->
+                            dir(service) {
+                                echo "Building and testing ${service}"
+                                bat "mvn clean install"
                                 bat "mvn test"
                             }
                         }
@@ -38,10 +42,15 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    services.each { service ->
-                        withSonarQubeEnv('SonarQubeServer') {
-                            bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                    def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+
+                    dir('ConstructionXpert') {
+                        services.each { service ->
+                            dir(service) {
+                                withSonarQubeEnv('SonarQubeServer') {
+                                    bat "mvn sonar:sonar -Dsonar.projectKey=${service} -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}"
+                                }
+                            }
                         }
                     }
                 }
@@ -50,10 +59,8 @@ pipeline {
 
         stage('Quality Gate Check') {
             steps {
-                script {
-                    timeout(time: 5, unit: 'MINUTES') {
-                        waitForQualityGate abortPipeline: true
-                    }
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
                 }
             }
         }
@@ -61,9 +68,14 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
-                    services.each { service ->
-                        docker.build("constructionxpert-${service}")
+                    def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+
+                    dir('ConstructionXpert') {
+                        services.each { service ->
+                            dir(service) {
+                                bat "docker build -t constructionxpert-${service} ."
+                            }
+                        }
                     }
                 }
             }
@@ -72,7 +84,8 @@ pipeline {
         stage('Tag and Push Docker Images') {
             steps {
                 script {
-                    def services = ['eureka-server', 'user-service', 'project-service', 'task-service', 'resource-service', 'gateway-service']
+                    def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+
                     docker.withRegistry("https://index.docker.io/v1/", 'docker-credentials-id') {
                         services.each { service ->
                             def imageName = "${DOCKER_HUB_REPO}:${service}"
