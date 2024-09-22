@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
+    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,31 +36,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.constructionxpert-services [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.constructionxpert-services [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.constructionxpert-services [sonar:sonar...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sonar-qube-jenkins&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PCPACK/Videos/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.constructionxpert-services [clean].executor": "Run",
+    "Maven.constructionxpert-services [install].executor": "Run",
+    "Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
+    "Maven.constructionxpert-services [sonar:sonar...].executor": "Run",
+    "Maven.constructionxpert-services [test].executor": "Run",
+    "Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "sonar-qube-jenkins",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PCPACK/Videos/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "CodeWithMe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert" />
@@ -142,7 +153,7 @@
       <workItem from="1726945067554" duration="640000" />
       <workItem from="1726945756416" duration="13294000" />
       <workItem from="1726998276143" duration="4446000" />
-      <workItem from="1727002946192" duration="17874000" />
+      <workItem from="1727002946192" duration="19110000" />
     </task>
     <servers />
   </component>
