@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,32 +29,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.constructionxpert-services [clean].executor": "Run",
-    "Maven.constructionxpert-services [install].executor": "Run",
-    "Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
-    "Maven.constructionxpert-services [sonar:sonar...].executor": "Run",
-    "Maven.constructionxpert-services [test].executor": "Run",
-    "Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "sonar-qube-jenkins",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PCPACK/Videos/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.constructionxpert-services [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [sonar:sonar...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PCPACK/Videos/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert" />
@@ -146,6 +147,8 @@
       <workItem from="1726945756416" duration="13294000" />
       <workItem from="1726998276143" duration="4446000" />
       <workItem from="1727002946192" duration="27663000" />
+      <workItem from="1727276517602" duration="844000" />
+      <workItem from="1727337909058" duration="340000" />
     </task>
     <servers />
   </component>
