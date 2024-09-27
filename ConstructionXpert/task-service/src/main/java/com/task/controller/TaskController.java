@@ -1,12 +1,15 @@
 package com.task.controller;
 
+import com.task.enums.Status;
 import com.task.exception.TaskNotFoundException;
 import com.task.model.Task;
 import com.task.service.TaskService;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
 
@@ -36,6 +39,34 @@ public class TaskController {
     @GetMapping("/project/{projectId}")
     public ResponseEntity<List<Task>> getTasksByProjectId(@PathVariable Long projectId) throws TaskNotFoundException {
         return ResponseEntity.ok(taskService.getTasksByProjectId(projectId));
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/page")
+    public ResponseEntity<Page<Task>> getAllTasksByProjectIdPaginated(
+            @RequestParam Long projectId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection)  throws TaskNotFoundException {
+        Page<Task> taskPage = taskService.getAllTasks(projectId ,page, size, sortField, sortDirection);
+        return ResponseEntity.ok(taskPage);
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/filter")
+    public ResponseEntity<Page<Task>> getFilteredResources(
+            @RequestParam Long projectId,
+            @RequestParam(required = false) LocalDate startDate,
+            @RequestParam(required = false) LocalDate endDate,
+            @RequestParam(required = false) Status status,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection) throws TaskNotFoundException {
+
+        Page<Task> resourcePage = taskService.getFilteredTasks(projectId, startDate, endDate, status, page, size, sortField, sortDirection);
+        return ResponseEntity.ok(resourcePage);
     }
 
     // Both ADMIN and CUSTOMER can view tasks by ID
