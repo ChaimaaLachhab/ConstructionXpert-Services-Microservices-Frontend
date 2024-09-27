@@ -4,10 +4,12 @@ import com.project.exception.ProjectNotFoundException;
 import com.project.model.Project;
 import com.project.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -30,6 +32,33 @@ public class ProjectController {
     public Project updateProject(@PathVariable Long id, @RequestBody Project projectDetails) throws ProjectNotFoundException {
         return projectService.updateProject(id, projectDetails);
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/page")
+    public ResponseEntity<Page<Project>> getAllProjectsPaginated(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection) {
+        Page<Project> projectPage = projectService.getAllProjects(page, size, sortField, sortDirection);
+        return ResponseEntity.ok(projectPage);
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/filter")
+    public ResponseEntity<Page<Project>> getFilteredProjects(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String status,
+            @RequestParam(required = false) LocalDate startDate,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection) {
+
+        Page<Project> projectPage = projectService.getFilteredProjects(name, status, startDate, page, size, sortField, sortDirection);
+        return ResponseEntity.ok(projectPage);
+    }
+
 
     // Only ADMIN can delete projects
     @PreAuthorize("hasRole('ADMIN')")

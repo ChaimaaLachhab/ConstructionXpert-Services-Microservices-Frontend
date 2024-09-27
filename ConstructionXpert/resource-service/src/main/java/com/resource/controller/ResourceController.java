@@ -1,10 +1,13 @@
 package com.resource.controller;
 
+import com.resource.enums.ResourceType;
 import com.resource.exception.ResourceNotFoundException;
 import com.resource.model.Resource;
 import com.resource.service.ResourceService;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,6 +48,35 @@ public class ResourceController {
     @GetMapping("/task/{taskId}")
     public ResponseEntity<List<Resource>> getTasksByProjectId(@PathVariable Long taskId) throws ResourceNotFoundException {
         return ResponseEntity.ok(resourceService.getResourcesByTaskId(taskId));
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/page")
+    public ResponseEntity<Page<Resource>> getAllTasksByProjectIdPaginated(
+            @RequestParam Long taskId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection)  throws ResourceNotFoundException {
+        Page<Resource> resourcePage = resourceService.getAllResources(taskId ,page, size, sortField, sortDirection);
+        return ResponseEntity.ok(resourcePage);
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/filter")
+    public ResponseEntity<Page<Resource>> getFilteredResources(
+            @RequestParam Long taskId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) Integer quantity,
+            @RequestParam(required = false) ResourceType type,
+            @RequestParam(required = false) String provider,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection) throws ResourceNotFoundException {
+
+        Page<Resource> resourcePage = resourceService.getFilteredResources(taskId, name, quantity, type, provider, page, size, sortField, sortDirection);
+        return ResponseEntity.ok(resourcePage);
     }
 
     // Only ADMIN can update resources

@@ -1,15 +1,23 @@
 package com.resource.service;
 
+import com.resource.enums.ResourceType;
 import com.resource.exception.ResourceNotFoundException;
 import com.resource.feign.TaskClient;
 import com.resource.model.Resource;
 import com.resource.repository.ResourceRepository;
+import jakarta.persistence.criteria.Predicate;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,6 +42,52 @@ public class ResourceService {
         }
     }
 
+    public Page<Resource> getAllResources(Long taskId, int page, int size, String sortField, String sortDirection) throws ResourceNotFoundException  {
+        Boolean existProject = taskClient.existTask(taskId);
+        if (Boolean.TRUE.equals(existProject)){
+            Sort.Direction direction = sortDirection.equalsIgnoreCase("asc") ? Sort.Direction.ASC : Sort.Direction.DESC;
+            Pageable pageable = PageRequest.of(page, size, Sort.by(direction, sortField));
+            return resourceRepository.findAllByTaskId(taskId, pageable);
+        }
+        throw new ResourceNotFoundException(taskId);
+    }
+
+    public Page<Resource> getFilteredResources(Long taskId, String name, Integer quantity, ResourceType type, String provider, int page, int size, String sortField, String sortDirection) throws ResourceNotFoundException {
+        Boolean existTask = taskClient.existTask(taskId);
+        if (Boolean.TRUE.equals(existTask)){
+            Sort.Direction direction = sortDirection.equalsIgnoreCase("asc") ? Sort.Direction.ASC : Sort.Direction.DESC;
+            Pageable pageable = PageRequest.of(page, size, Sort.by(direction, sortField));
+
+            Specification<Resource> spec = (root, query, criteriaBuilder) -> {
+                List<Predicate> predicates = new ArrayList<>();
+
+                predicates.add(criteriaBuilder.equal(root.get("taskId"), taskId));
+
+                if (name != null && !name.isEmpty()) {
+                    predicates.add(criteriaBuilder.like(criteriaBuilder.lower(root.get("name")), "%" + name.toLowerCase() + "%"));
+                }
+
+                if (quantity != null) {
+                    predicates.add(criteriaBuilder.equal(root.get("quantity"), quantity));
+                }
+
+                if (type != null) {
+                    predicates.add(criteriaBuilder.equal(root.get("type"), type));
+                }
+
+                if (provider != null && !provider.isEmpty()) {
+                    predicates.add(criteriaBuilder.like(criteriaBuilder.lower(root.get("provider")), "%" + provider.toLowerCase() + "%"));
+                }
+
+                predicates.add(criteriaBuilder.equal(root.get("taskId"), taskId));
+
+                return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
+            };
+
+            return resourceRepository.findAll(spec, pageable);
+        }
+        throw new ResourceNotFoundException(taskId);
+    }
 
     public List<Resource> getResourcesByTaskId(Long taskId) throws ResourceNotFoundException {
         Boolean existTask = taskClient.existTask(taskId);

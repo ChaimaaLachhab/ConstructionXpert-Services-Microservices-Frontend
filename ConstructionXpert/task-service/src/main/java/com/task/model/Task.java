@@ -1,5 +1,6 @@
 package com.task.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.task.enums.Status;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.*;
@@ -24,6 +25,7 @@ public class Task {
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    @JsonIgnore
     @Column(name = "project_id", nullable = false)
     private Long projectId;
 }

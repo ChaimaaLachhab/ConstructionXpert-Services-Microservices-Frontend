@@ -6,6 +6,7 @@ spring:
     name: task-service
   datasource:
     url: jdbc:mysql://taskdb:3306/task_db_1?createDatabaseIfNotExist=true
+#    url: jdbc:mysql://localhost:3306/task_db_1?createDatabaseIfNotExist=true
     username: root
     password: 1234
   jpa:
