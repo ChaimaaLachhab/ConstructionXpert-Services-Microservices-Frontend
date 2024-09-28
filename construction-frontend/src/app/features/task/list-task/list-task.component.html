@@ -1,22 +1,22 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Description</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Status</th>
-      <th>Project ID</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let task of tasks">
-      <td>{{ task.id }}</td>
-      <td>{{ task.description }}</td>
-      <td>{{ task.startDate }}</td>
-      <td>{{ task.endDate }}</td>
-      <td>{{ task.status }}</td>
-      <td>{{ task.projectId }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="task-list-container">
+  <h2>Tasks for Project</h2>
+
+  <div class="project-input">
+    <label for="projectId">Project ID:</label>
+    <input type="number" id="projectId" [(ngModel)]="projectId" placeholder="Enter Project ID">
+    <button (click)="fetchTasksForProject()">Fetch Tasks</button>
+  </div>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+  <div *ngIf="tasks.length > 0" class="task-list">
+    <div *ngFor="let task of tasks" class="task-item">
+      <h3>{{ task.description }}</h3>
+      <p>Status: {{ task.status }}</p>
+      <p>Start Date: {{ task.startDate | date }}</p>
+      <p>End Date: {{ task.endDate | date }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="tasks.length === 0 && !errorMessage">No tasks found for this project.</p>
+</div>
