@@ -9,6 +9,7 @@ import { AddResourceComponent } from './features/resource/add-resource/add-resou
 import { AddTaskComponent } from './features/task/add-task/add-task.component';
 import {LandingpageComponent} from "./shared/landingpage/landingpage.component";
 import {DashboardComponent} from "./shared/dashboard/dashboard.component";
+import { ListTaskComponent } from './features/task/list-task/list-task.component';
 
 export const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
@@ -21,6 +22,10 @@ export const routes: Routes = [
   },
   {path: 'add-task',
     component: AddTaskComponent,
+    canActivate: [authGuard, roleGuard([Role.ADMIN])]
+  },
+  {path: 'list-task',
+    component: ListTaskComponent,
     canActivate: [authGuard, roleGuard([Role.ADMIN])]
   },
   { path: 'add-resource',

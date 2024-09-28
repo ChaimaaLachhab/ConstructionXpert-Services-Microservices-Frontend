@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" afterDir="false" />
-    </list>
+    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +46,7 @@
     "Spring Boot.ResourceServiceApplication.executor": "Run",
     "Spring Boot.TaskServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "task-resource",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/group project/pull/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert/user-service/src/main/resources/db/migration",
@@ -159,7 +141,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
