@@ -4,24 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="9b553fad-dbed-4c2c-b50c-5a88487adbf7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/sidebar/sidebar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/sidebar/sidebar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/core/services/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/core/services/jwt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/jwt.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/core/services/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/services/project.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/authentication/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/features/project/add-product/add-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/feature/feature.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/core/models/page.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/feature/feature.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/feature/feature.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/feature/feature.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/feature/feature.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/feature/feature.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/feature/feature.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/hero/hero.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/feature/feature.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/hero/hero.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/hero/hero.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/hero/hero.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/hero/hero.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/hero/hero.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/hero/hero.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/hero/hero.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/login/login.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/sidebar/sidebar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/sidebar/sidebar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/sidebar/sidebar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/sidebar/sidebar.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/stats/stats.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/stats/stats.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/stats/stats.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/stats/stats.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/stats/stats.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/stats/stats.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/components/stats/stats.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/stats/stats.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +76,15 @@
 }</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2mOQHZ3OcFJnqVvlXOGjdvV8NtE" />
+  <component name="ProjectId" id="2ml9ODXGhvTg0fktPpkezXcATaL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Docker.ConstructionXpert: Compose Deployment.executor": "Run",
-    "Maven.constructionxpert-services [clean].executor": "Run",
-    "Maven.constructionxpert-services [install].executor": "Run",
-    "Maven.constructionxpert-services [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
-    "Maven.constructionxpert-services [sonar:sonar...].executor": "Run",
-    "Maven.constructionxpert-services [test].executor": "Run",
-    "Maven.eureka-server [org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -64,40 +96,19 @@
     "Spring Boot.ResourceServiceApplication.executor": "Run",
     "Spring Boot.TaskServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "task-resource",
-    "ignore.virus.scanning.warn.message": "true",
+    "git-widget-placeholder": "auth-project",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/group project/pull/ConstructionXpert-Services-Microservices-Frontend/ConstructionXpert/user-service/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
+    "npm.start.executor": "Run",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "CodeWithMe",
+    "ts.external.directory.path": "C:\\Users\\PCPACK\\Videos\\ConstructionXpert-Services-Microservices-Frontend\\construction-frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\group project\pull\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert\user-service\src\main\resources\db\migration" />
-      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert" />
-      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend" />
-      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert\eureka-server" />
-      <recent name="C:\Users\PCPACK\Videos\ConstructionXpert-Services-Microservices-Frontend\ConstructionXpert\eureka-server\src\main\resources" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn sonar:sonar -X" />
-    </option>
-  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -107,8 +118,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.ConstructionXpert: Compose Deployment">
+  <component name="RunManager" selected="npm.start">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.constructionxpert.eureka.EurekaServerApplication" />
       <method v="2">
@@ -116,6 +129,8 @@
       </method>
     </configuration>
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.GatewayServiceApplication" />
       <method v="2">
@@ -123,6 +138,8 @@
       </method>
     </configuration>
     <configuration name="ProjectServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="project-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.ProjectServiceApplication" />
       <method v="2">
@@ -130,6 +147,8 @@
       </method>
     </configuration>
     <configuration name="ResourceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="resource-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.resource.ResourceServiceApplication" />
       <method v="2">
@@ -137,6 +156,8 @@
       </method>
     </configuration>
     <configuration name="TaskServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="task-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.task.TaskServiceApplication" />
       <method v="2">
@@ -144,29 +165,33 @@
       </method>
     </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.user.UserServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionXpert: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
-        </settings>
-      </deployment>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/construction-frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="npm.start" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.ProjectServiceApplication" />
+      <item itemvalue="Spring Boot.ResourceServiceApplication" />
+      <item itemvalue="Spring Boot.TaskServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -177,31 +202,19 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\PCPACK\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
-      <created>1726945065169</created>
+      <changelist id="9b553fad-dbed-4c2c-b50c-5a88487adbf7" name="Changes" comment="" />
+      <created>1727640267178</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726945065169</updated>
-      <workItem from="1726945067554" duration="640000" />
-      <workItem from="1726945756416" duration="13294000" />
-      <workItem from="1726998276143" duration="4446000" />
-      <workItem from="1727002946192" duration="27663000" />
-      <workItem from="1727276517602" duration="844000" />
-      <workItem from="1727337909058" duration="340000" />
-      <workItem from="1727427546910" duration="18083000" />
+      <updated>1727640267178</updated>
+      <workItem from="1727640268837" duration="309000" />
+      <workItem from="1727641970156" duration="7598000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

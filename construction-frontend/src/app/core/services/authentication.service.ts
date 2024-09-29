@@ -9,7 +9,7 @@ import { JwtService } from "./jwt.service";
 import { Router } from "@angular/router";
 import { LoginResponse } from "../dtos/login-response.model";
 import { Role } from "../enums/role";
-import {User} from "../models/user.model";  // Import de l'énum Role
+import {User} from "../models/user.model";
 
 @Injectable({
   providedIn: 'root'

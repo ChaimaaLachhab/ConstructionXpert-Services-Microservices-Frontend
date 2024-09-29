@@ -9,16 +9,44 @@ import { AddResourceComponent } from './features/resource/add-resource/add-resou
 import { AddTaskComponent } from './features/task/add-task/add-task.component';
 import {LandingpageComponent} from "./shared/landingpage/landingpage.component";
 import {DashboardComponent} from "./shared/dashboard/dashboard.component";
+import {FilterProjectsComponent} from "./features/project/filter-projects/filter-projects.component";
+import {Status} from "./core/enums/status";
+import {StatsComponent} from "./shared/dashboard/stats/stats.component";
 
 export const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
   { path: 'home', component: LandingpageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard',
+  {
+    path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [authGuard, roleGuard([Role.ADMIN])]
+    canActivate: [authGuard, roleGuard([Role.ADMIN])],
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        component: StatsComponent,
+      },
+      {
+        path: 'projects',
+        component: FilterProjectsComponent
+      },
+      {
+        path: 'tasks',
+        component: AddTaskComponent
+      },
+      {
+        path: 'resources',
+        component: ListResourceComponent
+      },
+    ]
   },
+
   {path: 'add-task',
     component: AddTaskComponent,
     canActivate: [authGuard, roleGuard([Role.ADMIN])]
@@ -30,6 +58,6 @@ export const routes: Routes = [
   { path: 'list-resource',
     component: ListResourceComponent,
     canActivate: [authGuard, roleGuard([Role.ADMIN])]
-   }
+   },
 ]
 
