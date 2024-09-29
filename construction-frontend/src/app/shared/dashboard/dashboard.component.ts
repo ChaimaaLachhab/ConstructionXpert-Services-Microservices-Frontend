@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from "../components/header/header.component";
-import {SidebarComponent} from "../components/sidebar/sidebar.component";
-import {StatsComponent} from "../components/stats/stats.component";
 import {ListProjectComponent} from "../../features/project/list-project/list-project.component";
+import {RouterOutlet} from "@angular/router";
+import {StatsComponent} from "./stats/stats.component";
+import {SidebarComponent} from "./sidebar/sidebar.component";
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ import {ListProjectComponent} from "../../features/project/list-project/list-pro
     HeaderComponent,
     SidebarComponent,
     StatsComponent,
-    ListProjectComponent
+    ListProjectComponent,
+    RouterOutlet
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

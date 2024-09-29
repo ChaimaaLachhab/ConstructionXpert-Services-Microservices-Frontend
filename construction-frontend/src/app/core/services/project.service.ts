@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {environment} from "../../../environments/environment";
 import {Project} from "../models/project.model";
+import {Page} from "../models/page.model";
 
 @Injectable({
   providedIn: 'root'
@@ -12,33 +13,59 @@ export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
-  // Create a new project
   createProject(project: Project): Observable<Project> {
     return this.http.post<Project>(this.apiUrl, project);
   }
 
-  // Update an existing project
   updateProject(id: number, project: Project): Observable<Project> {
     return this.http.put<Project>(`${this.apiUrl}/${id}`, project);
   }
 
-  // Delete a project
   deleteProject(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 
-  // Get all projects
   getAllProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(this.apiUrl);
   }
 
-  // Get project
   getProjectById(id: number): Observable<Project> {
     return this.http.get<Project>(`${this.apiUrl}/get/${id}`);
   }
 
-  // Check if a project exists
   existProject(id: number): Observable<boolean> {
     return this.http.get<boolean>(`${this.apiUrl}/${id}/exist`);
+  }
+
+  getFilteredProjects(
+    page: number = 0,
+    size: number = 5,
+    sortField: string = 'id',
+    sortDirection: string = 'asc',
+    name?: string,
+    status?: string,
+    startDate?: string
+
+  ): Observable<Page<Project>> {
+
+    let params = new HttpParams()
+      .set('page', page)
+      .set('size', size)
+      .set('sortField', sortField)
+      .set('sortDirection', sortDirection);
+
+    if (name) {
+      params = params.set('name', name);
+    }
+
+    if (status) {
+      params = params.set('status', status);
+    }
+
+    if (startDate) {
+      params = params.set('startDate', startDate);
+    }
+
+    return this.http.get<Page<Project>>(`${this.apiUrl}/filter`, { params });
   }
 }

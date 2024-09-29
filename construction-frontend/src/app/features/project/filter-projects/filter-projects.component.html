@@ -1,0 +1,124 @@
+<div class="project-list-container">
+  <div class="header d-flex justify-content-between">
+    <h1 style="font-size: 1.5rem; font-weight: 1000;">All Projects</h1>
+    <app-add-product></app-add-product>
+  </div>
+
+  <div class="project-container">
+    <div class="filter-form-container">
+      <form [formGroup]="filterForm" class="filter-form">
+
+        <!-- Name Input -->
+        <mat-form-field appearance="fill" class="filter-input">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="Filter by name" (keyup)="applyFilter()">
+        </mat-form-field>
+
+        <!-- Status Select (Dropdown) -->
+        <mat-form-field appearance="fill" class="filter-input">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status" (selectionChange)="applyFilter()">
+            <mat-option *ngFor="let status of statusOptions" [value]="status">{{ status }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- Start Date Picker -->
+        <mat-form-field appearance="fill" class="filter-input">
+          <mat-label>Start Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a start date" (dateChange)="applyFilter()" type="date">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)" style="border-radius: 12px;" class="border-round">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="!element.isEdit">{{element.name}}</ng-container>
+          <ng-container *ngIf="element.isEdit">
+            <input class="inputedit" matInput [(ngModel)]="element.name">
+          </ng-container>
+        </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="!element.isEdit">{{element.status}}</ng-container>
+          <ng-container *ngIf="element.isEdit">
+            <input class="inputedit" matInput [(ngModel)]="element.status">
+          </ng-container>
+        </td>
+      </ng-container>
+
+      <!-- Start Date Column -->
+      <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="!element.isEdit">{{element.startDate | date}}</ng-container>
+          <ng-container *ngIf="element.isEdit">
+            <input class="inputedit" matInput [(ngModel)]="element.startDate" type="date">
+          </ng-container>
+        </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <button pButton
+                  pRipple icon="pi pi-pencil"
+                  class="p-button-rounded p-button-text"
+                  style="border-radius: 5px;"
+                  *ngIf="!element.isEdit" (click)="editRow(element)"></button>
+          <button pButton
+                  pRipple icon="pi pi-check"
+                  class="p-button-rounded p-button-text p-button-success"
+                  style="border-radius: 5px;"
+                  *ngIf="element.isEdit" (click)="saveRow(element)"></button>
+          <button pButton
+                  pRipple icon="pi pi-times"
+                  class="p-button-rounded p-button-text p-button-danger"
+                  style="border-radius: 5px;"
+                  *ngIf="element.isEdit" (click)="cancelEdit(element)"></button>
+          <button pButton
+                  pRipple icon="pi pi-trash"
+                  class="p-button-rounded p-button-text p-button-danger"
+                  style="border-radius: 5px;"
+                  *ngIf="!element.isEdit" (click)="delete(element.id)"></button>
+          <button pButton
+                  pRipple icon="pi pi-info"
+                  class="p-button-rounded p-button-text p-button-info"
+                  style="border-radius: 5px;"
+                  *ngIf="!element.isEdit" (click)="infos(element.id)"></button>
+        </td>
+      </ng-container>
+
+      <!-- Row definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [length]="totalProjects"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[5, 10, 25, 100]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+
+</div>
+
+<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+<p-toast></p-toast>

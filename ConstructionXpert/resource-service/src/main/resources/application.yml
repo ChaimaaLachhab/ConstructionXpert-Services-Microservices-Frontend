@@ -5,8 +5,8 @@ spring:
   application:
     name: resource-service
   datasource:
-    url: jdbc:mysql://resourcedb:3306/resource_db_1?createDatabaseIfNotExist=true
-#    url: jdbc:mysql://localhost:3306/resource_db_1?createDatabaseIfNotExist=true
+#    url: jdbc:mysql://resourcedb:3306/resource_db_1?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/resource_db_1?createDatabaseIfNotExist=true
     username: root
     password: 1234
   jpa:
