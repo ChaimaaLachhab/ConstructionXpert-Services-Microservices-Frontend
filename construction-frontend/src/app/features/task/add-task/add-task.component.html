@@ -1,25 +1,43 @@
-<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-  <label>Description:</label>
-  <input formControlName="description" type="text" required />
-  <br />
+<div class="container">
+  <div class="info-section">
+    <div class="info-content">
+      <h2>Manage Your Tasks</h2>
+      <p>Stay organized, focused, and in control with our intuitive task management system. Add new tasks, set deadlines, and track your progress effortlessly.</p>
+    </div>
+  </div>
+  <div class="form-section">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+      <h2>Add New Task</h2>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input id="description" formControlName="description" type="text" required placeholder="Enter task description" />
+      </div>
 
-  <label>Start Date:</label>
-  <input formControlName="startDate" type="date" required />
-  <br />
+      <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input id="startDate" formControlName="startDate" type="date" required />
+      </div>
 
-  <label>End Date:</label>
-  <input formControlName="endDate" type="date" required />
-  <br />
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input id="endDate" formControlName="endDate" type="date" required />
+      </div>
 
-  <label>Status:</label>
-  <select formControlName="status" required>
-    <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
-  </select>
-  <br />
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" formControlName="status" required>
+          <option *ngFor="let status of statuses" [value]="status">
+            {{ formatStatus(status) }}
+          </option>
+        </select>
+      </div>
 
-  <label>Project ID:</label>
-  <input formControlName="projectId" type="number" required />
-  <br />
+      <div class="form-group">
+        <label for="projectId">Project ID:</label>
+        <input id="projectId" formControlName="projectId" type="number" required placeholder="Enter project ID" />
+      </div>
 
-  <button type="submit" [disabled]="taskForm.invalid">Add Task</button>
-</form>
+      <button type="submit" [disabled]="taskForm.invalid" class="submit-btn">Add Task</button>
+    </form>
+  </div>
+</div>
