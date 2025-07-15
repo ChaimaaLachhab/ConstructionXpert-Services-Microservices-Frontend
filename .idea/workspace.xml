@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="5cac5a4a-f540-47c0-bff3-ae735deb1e46" name="Changes" comment="" />
 =======
+=======
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
     <list default="true" id="9b553fad-dbed-4c2c-b50c-5a88487adbf7" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/dashboard/sidebar/sidebar.component.css" afterDir="false" />
@@ -65,7 +68,10 @@
       <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/construction-frontend/src/app/shared/landingpage/landingpage.component.ts" afterDir="false" />
     </list>
+<<<<<<< HEAD
 >>>>>>> auth-project
+=======
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,11 +107,15 @@
     "Spring Boot.TaskServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
 =======
     "git-widget-placeholder": "auth-project",
 >>>>>>> auth-project
+=======
+    "git-widget-placeholder": "auth-project",
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -182,29 +192,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/construction-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="ConstructionXpert: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <recent_temporary>
       <list>
         <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
       </list>
     </recent_temporary>
 =======
+=======
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
     <list>
       <item itemvalue="npm.start" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
@@ -214,7 +228,10 @@
       <item itemvalue="Spring Boot.TaskServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
+<<<<<<< HEAD
 >>>>>>> auth-project
+=======
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

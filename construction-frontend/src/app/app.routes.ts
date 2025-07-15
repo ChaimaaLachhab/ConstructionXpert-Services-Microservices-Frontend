@@ -10,12 +10,19 @@ import { AddTaskComponent } from './features/task/add-task/add-task.component';
 import {LandingpageComponent} from "./shared/landingpage/landingpage.component";
 import {DashboardComponent} from "./shared/dashboard/dashboard.component";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ListTaskComponent } from './features/task/list-task/list-task.component';
 =======
 import {FilterProjectsComponent} from "./features/project/filter-projects/filter-projects.component";
 import {Status} from "./core/enums/status";
 import {StatsComponent} from "./shared/dashboard/stats/stats.component";
 >>>>>>> auth-project
+=======
+import {FilterProjectsComponent} from "./features/project/filter-projects/filter-projects.component";
+import {Status} from "./core/enums/status";
+import {StatsComponent} from "./shared/dashboard/stats/stats.component";
+import { ListTaskComponent } from './features/task/list-task/list-task.component';
+>>>>>>> 5be601337f0293efcdb16ca10c8a244f9a1d059d
 
 export const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
