@@ -16,26 +16,34 @@ import { MatInput} from "@angular/material/input";
 import { MatAnchor, MatButton} from "@angular/material/button";
 import { MatOption, MatSelect} from "@angular/material/select";
 import { NgIf} from '@angular/common';
+import {ButtonDirective} from "primeng/button";
+import {InputTextModule} from "primeng/inputtext";
+import {PasswordModule} from "primeng/password";
+import {Ripple} from "primeng/ripple";
 
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    RouterOutlet,
-    MatCard,
-    MatCardContent,
-    RouterLink,
-    MatLabel,
-    MatFormField,
-    MatInput,
-    MatAnchor,
-    MatButton,
-    MatSelect,
-    MatOption,
-    NgIf
-  ],
+    imports: [
+        ReactiveFormsModule,
+        RouterOutlet,
+        MatCard,
+        MatCardContent,
+        RouterLink,
+        MatLabel,
+        MatFormField,
+        MatInput,
+        MatAnchor,
+        MatButton,
+        MatSelect,
+        MatOption,
+        NgIf,
+        ButtonDirective,
+        InputTextModule,
+        PasswordModule,
+        Ripple
+    ],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -56,24 +64,10 @@ export class RegisterComponent {
         Validators.pattern('[a-z0-9]+@[a-z]+.[a-z]{2,3}')
       ]],
       password: ['', [
-        Validators.required,
-        Validators.minLength(6),
-        this.passwordStrengthValidator
+        Validators.required
       ]]
     });
   }
-
-  passwordStrengthValidator(control: AbstractControl): ValidationErrors | null {
-    const value = control.value || '';
-    const hasNumber = /\d/.test(value);
-    const hasUpperCase = /[A-Z]/.test(value);
-    const hasLowerCase = /[a-z]/.test(value);
-    const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(value);
-
-    const valid = hasNumber && hasUpperCase && hasLowerCase && hasSpecialCharacter;
-    return !valid ? { passwordStrength: 'Password must contain uppercase, lowercase, number, and special character.' } : null;
-  }
-
 
   register() {
     if (this.registerForm.valid) {

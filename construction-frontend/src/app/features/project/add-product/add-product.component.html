@@ -1,1 +1,56 @@
-<p>add-product works!</p>
+<button pButton (click)="showDialog()" label="Add Project" icon="pi pi-plus" class="p-button-success" style="border-radius: 5px;"></button>
+<p-dialog header="CONSTRUCTIONXpert" [modal]="true" [(visible)]="visible" [style]="{ width: 'full' }">
+  <div class="container">
+    <div class="info-section">
+      <div class="info-content d-flex flex-column align-items-center gap-3">
+        <h2>Manage Your Project</h2>
+        <img class="w-50" src="https://www.zohowebstatic.com/sites/zweb/images/projects/construction/construction-illustration.png" alt="img"/>
+        <p>Stay organized, focused, and in control with our intuitive task management system. Add new tasks, set deadlines, and track your progress effortlessly.</p>
+      </div>
+    </div>
+    <div class="form-section">
+      <form [formGroup]="createProjectForm" (ngSubmit)="onSubmit()" class="task-form">
+        <h2>Add New Project</h2>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" type="text" required placeholder="Enter project name" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input id="description" formControlName="description" type="text" required placeholder="Enter project description" />
+        </div>
+
+        <div class="form-group">
+          <label for="startDate">Start Date:</label>
+          <input id="startDate" formControlName="startDate" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="endDate">End Date:</label>
+          <input id="endDate" formControlName="endDate" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Budget:</label>
+          <input id="budget" formControlName="budget" type="number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select id="status" formControlName="status" required>
+            <option *ngFor="let status of projectStatuses" [value]="status">
+              {{ status }}
+            </option>
+          </select>
+        </div>
+
+        <div class="flex justify-content-end gap-2">
+          <button pButton label="Cancel" severity="secondary" style="border-radius: 5px;" (click)="visible = false"></button>
+          <button pButton label="Submit" type="submit" style="border-radius: 5px;" [disabled]="createProjectForm.invalid"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</p-dialog>

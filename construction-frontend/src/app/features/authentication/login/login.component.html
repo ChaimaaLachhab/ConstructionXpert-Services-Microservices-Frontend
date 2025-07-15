@@ -1,34 +1,25 @@
-<main class="welcome-container">
-  <header class="brand-header">
-    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8264917f8793788b3993959f94d8176dd4b328dbeba49106292c6c23df63507f?placeholderIfAbsent=true&apiKey=636115f9631f48bf97a296bc25ce3201" class="brand-logo" alt="Respondo logo" />
-    <h1 class="brand-name">respondo</h1>
-  </header>
-
-  <section class="welcome-content">
-    <h2 class="welcome-title">Welcome Back</h2>
-    <form class="signup-form" [formGroup]="loginForm" (ngSubmit)="login()">
-      <div class="form-group">
-        <label for="fullName" class="form-label">Full name</label>
-        <input formControlName="userNameOrEmail" type="text" id="fullName" class="form-input" placeholder="First name and last name" aria-label="Enter your full name">
+<div class="align-items-center pt-8 surface-card p-4 shadow-2 border-round w-auto h-screen">
+  <div class="text-center mb-5">
+    <img width="9%"  src="https://i.gifer.com/origin/da/da1a08463998f75b818d4f97ab223c54_w200.gif" alt="Image" class="mb-3">
+    <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+    <span class="text-600 font-medium line-height-3">Don't have an account?</span>
+    <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer" href="/register">Create today!</a>
+  </div>
+  <form class="signup-form d-flex flex-column justify-content-center align-items-center" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="p-fluid w-50 align-items-center">
+      <label for="email" class="block text-900 font-medium mb-2">Username Or Email</label>
+      <div>
+        <input formControlName="userNameOrEmail" type="text" id="email" placeholder="Username Or Email address" pInputText class="w-full mb-3">
       </div>
-      <div class="form-group">
-        <label for="password" class="form-label">Password</label>
-        <input formControlName="password" type="password" id="password" class="form-input" placeholder="At least 12 characters" aria-label="Enter your password">
+    </div>
+
+    <div class="p-fluid w-50 align-items-center">
+      <label for="password" class="block text-900 font-medium mb-2">Password</label>
+      <div>
+        <p-password formControlName="password" type="password" id="password" placeholder="Your password"  [feedback]="false" [toggleMask]="true" />
       </div>
-      <button type="submit" class="signup-button" [disabled]="loginForm.invalid">Log in</button>
-    </form>
-  </section>
+    </div>
 
-  <footer class="site-footer">
-    <p class="copyright">© 2022 Brand, Inc.</p>
-    <nav class="footer-nav">
-      <a href="#" class="footer-link">Privacy</a>
-      <a href="#" class="footer-link">Terms</a>
-      <a href="#" class="footer-link">Sitemap</a>
-    </nav>
-  </footer>
-</main>
-
-
-
-<router-outlet />
+    <button pButton pRipple label="Log In" icon="pi pi-user" class="w-50 mt-4" style="border-radius: 5px;" type="submit" [disabled]="loginForm.invalid"></button>
+  </form>
+</div>

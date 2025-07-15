@@ -7,8 +7,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
 import {Button, ButtonDirective} from "primeng/button";
-import {FeatureComponent} from "../feature/feature.component";
-import {SidebarComponent} from "../sidebar/sidebar.component";
+import {FeatureComponent} from "../../landingpage/feature/feature.component";
+import {SidebarComponent} from "../../dashboard/sidebar/sidebar.component";
 import {Router} from "@angular/router";
 import {AuthenticationService} from "../../../core/services/authentication.service";
 @Component({

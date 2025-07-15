@@ -1,0 +1,96 @@
+.project-container {
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 30%;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+.mat-header-cell {
+  background-color: #0064cf;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mat-header-cell.mat-sort-header-sorted {
+  color: #004187;
+}
+
+.mat-cell {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.mat-header-row, .mat-row {
+  height: 60px;
+}
+
+.mat-row:hover {
+  background-color: #e0e0e0;
+}
+
+
+.mat-elevation-z8 {
+  border-radius: 8px;
+}
+
+mat-paginator {
+  margin-top: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+button[mat-button] {
+  display: inline-flex;
+  align-items: center;
+}
+
+button[mat-button] mat-icon {
+  margin-right: 5px;
+}
+
+/* Style for editable input fields */
+.inputedit {
+  background-color: #f3f3f3;
+  border: none;
+  border-bottom: 2px solid #0064cf;
+  padding: 5px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.inputedit:focus {
+  outline: none;
+  border-bottom: 2px solid #004187;
+  background-color: #ffffff;
+  transition: border-bottom-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.inputedit::placeholder {
+  color: #757575;
+}
+
+.inputedit:hover {
+  background-color: #ffffff;
+  border-bottom-color: #0064cf;
+}

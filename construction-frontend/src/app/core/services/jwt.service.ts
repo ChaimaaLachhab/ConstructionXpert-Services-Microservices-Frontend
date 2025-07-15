@@ -34,6 +34,7 @@ export class JwtService {
 
   removeToken(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('userRole');
   }
 
   getToken(): string | null {

@@ -1,36 +1,31 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import { AuthenticationService } from '../../../core/services/authentication.service';
-import {Router, RouterLink, RouterOutlet} from '@angular/router';
-import { LoginUserDto } from '../../../core/dtos/login-user-dto.dto';
-import {jwtDecode} from "jwt-decode";
+import {ButtonDirective} from "primeng/button";
+import {FloatLabelModule} from "primeng/floatlabel";
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {InputTextModule} from "primeng/inputtext";
+import {PasswordModule} from "primeng/password";
+import {Ripple} from "primeng/ripple";
+import {AuthenticationService} from "../../../core/services/authentication.service";
+import {Router} from "@angular/router";
 import {JwtService} from "../../../core/services/jwt.service";
-import {MatCard, MatCardContent} from "@angular/material/card";
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-import {MatCheckbox} from "@angular/material/checkbox";
-import {MatInput} from "@angular/material/input";
-import {MatAnchor, MatButton} from "@angular/material/button";
-import {Role} from "../../../core/enums/role";
+import {LoginUserDto} from "../../../core/dtos/login-user-dto.dto";
 import {LoginResponse} from "../../../core/dtos/login-response.model";
+import {Role} from "../../../core/enums/role";
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
-    ReactiveFormsModule,
-    RouterOutlet,
-    RouterLink,
-    MatCard,
-    MatCardContent,
-    MatLabel,
-    MatFormField,
-    MatCheckbox,
-    MatInput,
-    MatAnchor,
-    MatButton
+    ButtonDirective,
+    FloatLabelModule,
+    FormsModule,
+    InputTextModule,
+    PasswordModule,
+    Ripple,
+    ReactiveFormsModule
   ],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrl: './login.component.css'
 })
 export class LoginComponent {
   loginForm: FormGroup;
